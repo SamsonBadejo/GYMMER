@@ -1,0 +1,12 @@
+/* Optional CSS for the section */
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .team-item {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  

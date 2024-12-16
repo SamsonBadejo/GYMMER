@@ -1,0 +1,49 @@
+/* Infinite scroll animation with gap */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  gap: 2rem; /* Add gap between items */
+  animation: marquee 30s linear infinite; /* Adjust the timing as needed */
+}
+
+.testimonials-container {
+  max-width: 80%; /* Limit the width to 80% of the screen */
+  margin: 0 auto; /* Center the container */
+  padding: 0 2rem; /* Add padding on the left and right to avoid the content touching the edge */
+  overflow: hidden; /* Prevents overflowing content */
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.testimonial-items-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.testimonial-item {
+  flex-shrink: 0;
+  width: 300px; /* Adjust width for better display */
+}
+
+.testimonials-container:before,
+.testimonials-container:after {
+  content: "";
+  flex-grow: 0;
+  width: 2rem; /* Add space on the sides to avoid content touching edges */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 250px; /* Adjust for smaller screens */
+  }
+}
